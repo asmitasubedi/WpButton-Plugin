@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Custom Buy Now Buttons
+Plugin Name: TechLekh Custom Buttons
 Plugin URI:
-Description: Custom Button Plugin for an additional buy now feature
-Author: Asmita
+Description: Custom Button Plugin
+Author: Asmita Subdedi
 Version: 1.0
 Author URI: http://www.techlekh.com/
 */
@@ -12,9 +12,7 @@ define('CUSTOM_BUTTON_CREATOR_VERSION', '1.0');
 define('CUSTOM_BUTTON_CREATOR_URL', plugins_url('',__FILE__));
 define('CUSTOM_BUTTON_CREATOR_PATH',plugin_dir_path( __FILE__ ));
 
-include ('includes/custom-buttons-list.php');
-include ('includes/custom-buttons-add.php');
-include ('includes/custom-buttons-shortcode.php');
+include 'includes/tlbtn_include.php';
 
 function custombuttons_admin_register_head(){
 	echo '<script src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>';
@@ -27,20 +25,26 @@ function custombuttons_admin_load_js(){
 	echo '<script src="'.$jsurl.'"></script>';
 }
 
+
+//load assets
 add_action('admin_head', 'custombuttons_admin_register_head');
 add_action('admin_footer','custombuttons_admin_load_js');
 
+//add admin panel
 add_action('admin_menu', 'register_custom_admin_page');
 
+//create menus in admin panel
 function register_custom_admin_page(){
     add_menu_page("Custom Buttons", "Custom Buttons", "add_users", __FILE__, "custom_buttons_list");
 	add_submenu_page(__FILE__, "Manage Buttons", "Manage Buttons", "add_users", "custom-buttons-list", "custom_buttons_list");
     add_submenu_page(__FILE__, "Add Buttons", "Add Buttons", "add_users","custom-buttons-add", "custom_buttons_add");
 }
 
-register_activation_hook(__FILE__,'custom_buttons_create_db');
+//create database on activate
+register_activation_hook(__FILE__,'tlbtn_custom_buttons_db');
 
-function custom_buttons_create_db(){
+//create database function
+function tlbtn_custom_buttons_db(){
 	global $wpdb;
 	$charset_collate = $wpdb->get_charset_collate();
     $table_name= button_tablename();
@@ -61,9 +65,10 @@ function custom_buttons_create_db(){
 	dbDelta( $sql );
 }
 
+//table name only
 function button_tablename(){
     global $table_prefix;
-    $table_name = $table_prefix.'custombuynow_buttons';
+    $table_name = $table_prefix.'tlbtn_buttons';
     return $table_name;
 }
 ?>

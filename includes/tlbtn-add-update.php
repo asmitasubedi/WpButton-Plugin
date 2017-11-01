@@ -1,51 +1,5 @@
 <?php
-function redirectUser(){
-?>
-	<script>
-		window.location.assign("http://localhost/wordpress/wp-admin/admin.php?page=custom-buttons-list")
-	</script>
-<?php
-}
-function custom_buttons_save(){
-	global $wpdb;
-    $table_name=button_tablename();
-		$data=array(
-        'btn_name'                        => ($_POST['btn_name']!='' ? $_POST['btn_name']:'Unnamed'),
-        'btn_description'                 => ($_POST['btn_desc']!='' ? $_POST['btn_desc']:''),
-        'btn_text'                        => ($_POST['btn_text']!='' ? $_POST['btn_text']:'New'),
-        'btn_url'                         => $_POST['btn_url'],
-		'btn_price'						  => ($_POST['btn_price']!='' ? $_POST['btn_price']:'Rs. 0')
-    );
-	if($_POST['button_id']!=0){
-		$where = array('id'=>$_POST['button_id']);
-		$wpdb->update($table_name, $data,$where);
-		$button_id =$_POST['button_id'];
-	}else{
-		$wpdb->insert( $table_name, $data);
-		$button_id = $wpdb->insert_id;
-	}
-	return $button_id;
-}
-function custom_buttons_add(){
-  global $wpdb;
-  $button_ids=0;
-  if(isset($_GET['btnids'])){
-    $button_ids = $_GET['btnids'];
-  }
-  
-  $table_name=button_tablename();
-  if(isset($_GET['act']) && $_GET['act']=='addbtn'){
-    $button_ids=custom_buttons_save();
-	redirectUser();
-  }
-  if($button_ids!=0){
-    $sql="SELECT * FROM $table_name WHERE id='$button_ids' LIMIT 1";
-    $data['btn_results'] = $wpdb->get_row($sql);
-  }
-  $data['btnid']=(Object)array('button_id'=>$button_ids);
-  buttons_add_view($data);
-}
-  
+
 function buttons_add_view($data){
   $buttonid = $data['btnid']->button_id;
   isset($data['btn_results'])? $btnobj = $data['btn_results']: $btnobj='';
@@ -64,7 +18,7 @@ function buttons_add_view($data){
           	<p>Step 4: Customize all the visual properties of the button then save it again.</p>
           	<p>Step 5: Use the appropriate shortcode to place this button on your site.</p>
           </div></div>
-		  
+
 		  <div class="stuffbox">
             <h3><label for="link_name">Basics</label></h3>
             <div class="inside">

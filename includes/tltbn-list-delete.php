@@ -1,15 +1,5 @@
 <?php
-function custom_buttons_delete(){
-  global $wpdb;
-  $table_name=button_tablename();
-  $delete_btn_data = $_GET['btn_delete'];
-  $delete_btn_data = explode('_',$delete_btn_data);
-  
-  if(($delete_btn_data[0]=='delete')){
-    $sql="DELETE FROM $table_name WHERE id='$delete_btn_data[1]'";
-    $wpdb->query($sql);
-  }
-}
+
 
 function custom_buttons_list(){
 global $wpdb;
@@ -51,11 +41,11 @@ echo '<h2>Button List<a class="add-new-h2" href="admin.php?page=custom-buttons-a
     <?php
       foreach ($button_list as $btnl){
         
-        echo '<td>'.do_shortcode('[custom_buttons ids="'.$btnl->id.'"]').'</td>';
+        echo '<td>'.do_shortcode('[tlbtns ids="'.$btnl->id.'"]').'</td>';
         echo '<td><a href="admin.php?page=custom-buttons-add&btnids='.$btnl->id.'"><strong>'.$btnl->btn_name.'</strong></a><br />'.$btnl->btn_description.'</td>';
         echo '<td><a href='.$btnl->btn_url.'>'.$btnl->btn_url.'</a></td>';
 		echo '<td>'.$btnl->btn_price.'</td>';
-		echo '<td>[custom_buttons ids="'.$btnl->id.'"]</td>';
+		echo '<td>[tlbtns ids="'.$btnl->id.'"]</td>';
         echo '<td><a href="admin.php?page=custom-buttons-add&btnids='.$btnl->id.'">Edit</a> | <a href="admin.php?page=custom-buttons-list&btn_delete=delete_'.$btnl->id.'" onclick="javascript:custom_buttons_delete()">Delete</a></td>';
         echo '</tr>';
       }

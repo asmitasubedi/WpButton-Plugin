@@ -52,7 +52,7 @@ get_header(); ?>
                     var c1 =($(this).data("class")); 
 					alert(c1);
 					var c2 = (c1.split("_")); alert(c2[0]);
-					if(c2[0]== "wpbtn"){
+					if(c2[0]== "tlbtn"){
 						alert($(this).data("title"));alert($(this).data("price"));
 						FormObject = document.forms['test'];
 						alert(FormObject.elements["btnname"].value = $(this).data("title"));
