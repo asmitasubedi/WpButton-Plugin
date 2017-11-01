@@ -1,67 +1,59 @@
 <?php
-
+function redirectUser(){
+?>
+	<script>
+		window.location.assign("http://localhost/wordpress/wp-admin/admin.php?page=custom-buttons-list")
+	</script>
+<?php
+}
 function custom_buttons_save(){
 	global $wpdb;
     $table_name=button_tablename();
 		$data=array(
-        'btn_name'                        => ($_POST['btn_name']!='' ? $_POST['btn_name']:'Unnamed Button'),
+        'btn_name'                        => ($_POST['btn_name']!='' ? $_POST['btn_name']:'Unnamed'),
         'btn_description'                 => ($_POST['btn_desc']!='' ? $_POST['btn_desc']:''),
         'btn_text'                        => ($_POST['btn_text']!='' ? $_POST['btn_text']:'New'),
         'btn_url'                         => $_POST['btn_url'],
 		'btn_price'						  => ($_POST['btn_price']!='' ? $_POST['btn_price']:'Rs. 0')
     );
-
-    //insert
-    /*if (isset($_POST['insert'])) {
-        $wpdb->insert($table_name, //table
-            array('btn_name' => $btn_name, 'btn_description' => $btn_description, 'btn_text'=>$btn_text, 'btn_url'=>$btn_url, 'btn_price'=>$btn_price)); //data
-		$btn_id = $wpdb->insert_id;
-		$message.="Button Added";
-    }*/
 	if($_POST['button_id']!=0){
 		$where = array('id'=>$_POST['button_id']);
 		$wpdb->update($table_name, $data,$where);
 		$button_id =$_POST['button_id'];
-		$message.="Button Updated";
 	}else{
 		$wpdb->insert( $table_name, $data);
 		$button_id = $wpdb->insert_id;
-		$message.="Button Added";
 	}
 	return $button_id;
 }
-
 function custom_buttons_add(){
-  echo 'Hii from button add function. Lol';
   global $wpdb;
   $button_ids=0;
   if(isset($_GET['btnids'])){
     $button_ids = $_GET['btnids'];
   }
+  
   $table_name=button_tablename();
   if(isset($_GET['act']) && $_GET['act']=='addbtn'){
     $button_ids=custom_buttons_save();
+	redirectUser();
   }
   if($button_ids!=0){
     $sql="SELECT * FROM $table_name WHERE id='$button_ids' LIMIT 1";
     $data['btn_results'] = $wpdb->get_row($sql);
-	//echo $data['btn_results'];
   }
   $data['btnid']=(Object)array('button_id'=>$button_ids);
-  //print_r($data);
   buttons_add_view($data);
 }
   
 function buttons_add_view($data){
-	//echo $data['btn_results'];
   $buttonid = $data['btnid']->button_id;
   isset($data['btn_results'])? $btnobj = $data['btn_results']: $btnobj='';
     ?>
 
     <div class="wrap">
         <h2>Buttons Add/Edit</h2>
-        <?php if (isset($message)): ?><div class="updated"><p><?php echo $message; ?></p></div><?php endif; ?>
-		<form name="buttons_form" id="buttons_form" method="post" action="admin.php?page=custom-buttons-add&act=addbtn" enctype="multipart/form-data">
+        <form name="buttons_form" id="buttons_form" method="post" action="admin.php?page=custom-buttons-add&act=addbtn" enctype="multipart/form-data">
           <input type="hidden" name="button_id" value="<?php echo $buttonid; ?>"/>
             <div class="stuffbox">
             <h3><label for="link_name">Quick Usage Instruction</label></h3>
@@ -121,10 +113,9 @@ function buttons_add_view($data){
 			   </table>
 			</div>
 		</div>
-        <input type='submit' name="insert" value='Save' class='button'>
+			<a class="button-primary" onclick="javascript:custom_buttons_save()">Save</a>
         </form>
     </div>
     <?php
 }
-
 ?>
