@@ -14,7 +14,8 @@ $sql = "SELECT * FROM $table_name ORDER BY ts DESC";
 $button_list = $wpdb->get_results($sql);
 
 echo '<div class="wrap">';
-echo '<h2>Button List<a class="add-new-h2" href="admin.php?page=custom-buttons-add">Add New</a></h2>';
+echo '<h2>Button List</h2>';
+echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="new-btn" >Add New</div></a>';
 ?>
  <table class="wp-list-table widefat fixed bookmarks" id="myTable" cellspacing="0">
     <thead>
@@ -53,6 +54,6 @@ echo '<h2>Button List<a class="add-new-h2" href="admin.php?page=custom-buttons-a
     </tbody>
   </table>
   <?php
-  echo '</div>'; 
+  echo '</div><!--wrap-->';
 }
 ?>

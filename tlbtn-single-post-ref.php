@@ -33,15 +33,21 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-	<form action="mailto:asmita.subedi@deerwalk.edu.np" id="test" name="buyform" method="post" enctype="text/plain">
-  		Title: <input type="text" name="btnname"><br>
-  		Price: <input type="text" name="price"><br>
-  		Name: <input type="text" name="name"><br>
-  		Email: <input type="email" name="email"><br>
-  		Phone No: <input type="text" name="phno"><br>
-  			<input type="submit" value="Submit">
-	</form>
- 
+
+			<div id="openModal" class="modalDialog">
+				<div>	<a href="#close" title="Close" class="close">X</a>
+
+					<form action="mailto:asmita.subedi@deerwalk.edu.np" id="test" name="buyform" method="post" enctype="text/plain">
+						Title: <input type="text" name="btnname"><br>
+						Price: <input type="text" name="price"><br>
+						Name: <input type="text" name="name"><br>
+						Email: <input type="email" name="email"><br>
+						Phone No: <input type="text" name="phno"><br>
+						<input type="submit" value="Submit">
+					</form>
+				</div>
+			</div>
+			
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>    
     <script>
     $(document).ready(function()

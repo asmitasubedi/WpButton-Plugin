@@ -21,7 +21,7 @@ function buttons_add_view($data){
 
 		  <div class="stuffbox">
             <h3><label for="link_name">Basics</label></h3>
-            <div class="inside">
+            <div class="inside add-area">
               <table cellpadding="0">
                 <tr>
                   <td class="tdlabel">Name</td>
@@ -41,7 +41,7 @@ function buttons_add_view($data){
           </div>
           <div class="stuffbox">
             <h3><label for="link_name">Button Content</label></h3>
-            <div class="inside">
+            <div class="inside add-area">
               <table cellpadding="0">
                 <tr>
                   <td class="tdlabel">Button Text</td>
@@ -54,14 +54,14 @@ function buttons_add_view($data){
                   <td class="tdlabel">Target URL</td>
                   <td>
                     <input type="text" name="btn_url" id="btn_url" value="<?php echo $btnobj->btn_url; ?>" class="tdinputa" />
-                    <span class="lblhlp" >Enter the URL where the button will be displayed on.</span>
+                    <span class="lblhlp" >Enter the URL where the button will be displayed on</span>
                   </td>
                 </tr>
 				<tr>
                   <td class="tdlabel">Data Price</td>
                   <td>
                     <input type="text" name="btn_price" id="btn_price" value="<?php echo $btnobj->btn_price; ?>" class="tdinputa" />
-                    <span class="lblhlp" >Enter the price worth of the item for which the button is created.</span>
+                    <span class="lblhlp" >Enter the price worth of the item for which the button is created</span>
                   </td>
                 </tr>
 			   </table>

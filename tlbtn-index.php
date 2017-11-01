@@ -15,11 +15,15 @@ define('CUSTOM_BUTTON_CREATOR_PATH',plugin_dir_path( __FILE__ ));
 include 'includes/tlbtn_include.php';
 
 function custombuttons_admin_register_head(){
+	$cssurl = CUSTOM_BUTTON_CREATOR_URL.'/css/tlbtn_styles.css';
+	echo '<link rel=\'stylesheet\' href="'.$cssurl.'" type=\'text/css\' media=\'all\' />';
+
 	echo '<script src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>';
 }
 
 function custombuttons_admin_load_js(){
-	$jsurl = CUSTOM_BUTTON_CREATOR_URL.'/js/custom-buttons.js';
+	$jsurl = CUSTOM_BUTTON_CREATOR_URL.'/js/tlbtn_scripts.js';
+
 	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>';
 	echo '<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>';
 	echo '<script src="'.$jsurl.'"></script>';
@@ -35,7 +39,7 @@ add_action('admin_menu', 'register_custom_admin_page');
 
 //create menus in admin panel
 function register_custom_admin_page(){
-    add_menu_page("Custom Buttons", "Custom Buttons", "add_users", __FILE__, "custom_buttons_list");
+    add_menu_page("TL Buttons", "TL Buttons", "add_users", __FILE__, "custom_buttons_list");
 	add_submenu_page(__FILE__, "Manage Buttons", "Manage Buttons", "add_users", "custom-buttons-list", "custom_buttons_list");
     add_submenu_page(__FILE__, "Add Buttons", "Add Buttons", "add_users","custom-buttons-add", "custom_buttons_add");
 }
