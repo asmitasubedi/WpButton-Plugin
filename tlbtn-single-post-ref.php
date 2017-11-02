@@ -15,7 +15,7 @@ get_header(); ?>
 
 <style>
 
-	.modalDialog {
+	.tlBtn-modalDialog {
 		position: fixed;
 		font-family: Arial, Helvetica, sans-serif;
 		top: 0;
@@ -30,22 +30,19 @@ get_header(); ?>
 		transition: opacity 400ms ease-in;
 		pointer-events: none;
 	}
-	.modalDialog:target {
+	.tlBtn-modalDialog:target {
 		opacity:1;
 		pointer-events: auto;
 	}
-	.modalDialog > div {
-		width: 400px;
+	.tlBtn-modalDialog > div {
+		width: 600px;
 		position: relative;
-		margin: 10% auto;
-		padding: 5px 20px 13px 20px;
-		border-radius: 10px;
+		margin: 5% auto;
+		padding: 0;
+		border-radius: 0px;
 		background: #fff;
-		background: -moz-linear-gradient(#fff, #999);
-		background: -webkit-linear-gradient(#fff, #999);
-		background: -o-linear-gradient(#fff, #999);
 	}
-	.close {
+	.tlBtn-close {
 		background: #606061;
 		color: #FFFFFF;
 		line-height: 25px;
@@ -63,8 +60,29 @@ get_header(); ?>
 		-webkit-box-shadow: 1px 1px 3px #000;
 		box-shadow: 1px 1px 3px #000;
 	}
-	.close:hover {
-		background: #00d9ff;
+	.tlBtn-close:hover {
+		background: #e41212;
+		color: #fff;
+	}
+	div#tlbtn-product-title p {
+		margin: 0;
+		font-size: 18px;
+		font-weight: bold;
+		color: #383838;
+	}
+	div#tlbtn-product-title {
+		background-color: #f8f8f8 !important;
+		border-bottom: #f5f5f5 1px solid;
+		padding: 12px 15px !important;
+		box-shadow: 0 0 6px rgba(0,0,0,0.2);
+		background: #d5d5d5;
+	}
+	div#tltbn-main-form {
+		padding: 15px;
+	}
+	input#tlbtn-sumbit {
+		background: #e41121;
+		border-radius: 0;
 	}
 
 </style>
@@ -90,23 +108,31 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<a href="#openModal"><button type="button" class="custom-buttons" data-class="tlbtn_2" data-title="Test" data-request-url="dfasfdsa" data-price="11111">dsfasd</button></a>
+			<a href="#tlBtn-openModal"><button type="button" class="custom-buttons" data-class="tlbtn_2" data-title="Test" data-request-url="dfasfdsa" data-price="11111">dsfasd</button></a>
 
-			<a href="#openModal"><button type="button" class="custom-buttons" data-class="tlbtn_23" data-title="Tessdfsfsfast" data-request-url="dfasfdsa" data-price="11121212111">dsfasd</button></a>
+			<a href="#tlBtn-openModal"><button type="button" class="custom-buttons" data-class="tlbtn_23" data-title="Tessdfsfsfast" data-request-url="dfasfdsa" data-price="11121212111">dsfasd</button></a>
 
 
 
-			<div id="openModal" class="modalDialog">
-				<div>	<a href="#close" title="Close" class="close">X</a>
+			<div id="tlBtn-openModal" class="tlBtn-modalDialog">
+				<div>	<a href="#tlBtn-close" title="Close" class="tlBtn-close">X</a>
 
-					<form action="mailto:asmita.subedi@deerwalk.edu.np" id="test" name="buyform" method="post" enctype="text/plain">
-						Title: <input type="text" name="btnname"><br>
-						Price: <input type="text" name="price"><br>
-						Name: <input type="text" name="name"><br>
-						Email: <input type="email" name="email"><br>
-						Phone No: <input type="text" name="phno"><br>
-						<input type="submit" value="Submit">
-					</form>
+					<div id="tlbtn-product-title"><p>Buy <span id="tlbtn-product-name"> </span> | Price <span id="tlbtn-product-price"> </span><p></div>
+
+					<div id="tltbn-main-form">
+						<form action="mailto:asmita.subedi@deerwalk.edu.np" id="test" name="buyform" method="post" enctype="text/plain">
+							<!-- Title: <input type="text" name="btnname"><br>
+                            Price: <input type="text" name="price"><br> -->
+							Name: <input type="text" name="name"><br>
+							Email: <input type="email" name="email"><br>
+							Phone No: <input type="text" name="phno"><br>
+
+							<div id="tlbtn-sumit-div">
+								<input id="tlbtn-sumbit" type="submit" value="Submit">
+							</div>
+						</form>
+					</div>
+
 				</div>
 			</div>
 
@@ -116,6 +142,9 @@ get_header(); ?>
 			<script>
 				$(document).ready(function()
 				{
+
+
+
 
 					//$("#test").hide();
 					$("button").click(function()
@@ -130,12 +159,15 @@ get_header(); ?>
 							//alert($(this).data("title"));alert($(this).data("price"));
 							FormObject = document.forms['test'];
 							//	alert(FormObject.elements["btnname"].value = $(this).data("title"));
+							var productName = $(this).data("title");
+							console.log(productName);
+							$('#tlbtn-product-name').html(productName);
+							// FormObject.elements["btnname"].value = $(this).data("title");
 
-							FormObject.elements["btnname"].value = $(this).data("title");
-
+							$('#tlbtn-product-price').html = $(this).data("price");
 							//	alert(FormObject.elements["price"].value = $(this).data("price"));
 
-							FormObject.elements["price"].value = $(this).data("price");
+							//FormObject.elements["price"].value = $(this).data("price");
 
 
 

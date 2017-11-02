@@ -83,7 +83,7 @@ function custombutton_shortcode($atts){
     isset($btn_data->btn_url)? $button_target_url = ($btn_data->btn_url) : $button_target_url = '';
 
     $output = '';
-    $output .= '<a href="#openModal"><button type="button" class="custom-buttons" data-class="tlbtn_'.$btn_data->id.'" data-title="'.$btn_data->btn_name.'" data-request-url="'.$button_target_url.'" data-price="'.$btn_data->btn_price.'">'.$btn_data->btn_text.'</button></a>';
+    $output .= '<a href="#tlBtn-openModal"><button type="button" class="custom-buttons" data-class="tlbtn_'.$btn_data->id.'" data-title="'.$btn_data->btn_name.'" data-request-url="'.$button_target_url.'" data-price="'.$btn_data->btn_price.'">'.$btn_data->btn_text.'</button></a>';
 
     return $output;
 }
