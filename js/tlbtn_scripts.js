@@ -19,10 +19,6 @@ function custom_buttons_save(){
   }
 }
 
-function custom_buttons_delete(){
-	confirm('Are you sure you want to delete?');
-}
-
 $(document).ready(function(){
     $('#myTable').DataTable();
 });

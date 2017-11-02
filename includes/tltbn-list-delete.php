@@ -22,7 +22,6 @@ echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="
       <tr>
         <th>Button</th>
         <th>Button Name & Description</th>
-		<th>Request URL</th>
 		<th>Price</th>
         <th>Shortcode</th>
         <th>Actions</th>
@@ -32,7 +31,6 @@ echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="
       <tr>
         <th>Button</th>
         <th>Button Name & Description</th>
-		<th>Request URL</th>
 		<th>Price</th>
         <th>Shortcode</th>
         <th>Actions</th>
@@ -44,10 +42,9 @@ echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="
         
         echo '<td>'.do_shortcode('[tlbtns ids="'.$btnl->id.'"]').'</td>';
         echo '<td><a href="admin.php?page=custom-buttons-add&btnids='.$btnl->id.'"><strong>'.$btnl->btn_name.'</strong></a><br />'.$btnl->btn_description.'</td>';
-        echo '<td><a href='.$btnl->btn_url.'>'.$btnl->btn_url.'</a></td>';
-		echo '<td>'.$btnl->btn_price.'</td>';
+       	echo '<td>'.$btnl->btn_price.'</td>';
 		echo '<td>[tlbtns ids="'.$btnl->id.'"]</td>';
-        echo '<td><a href="admin.php?page=custom-buttons-add&btnids='.$btnl->id.'">Edit</a> | <a href="admin.php?page=custom-buttons-list&btn_delete=delete_'.$btnl->id.'" onclick="javascript:custom_buttons_delete()">Delete</a></td>';
+        echo '<td><a href="admin.php?page=custom-buttons-add&btnids='.$btnl->id.'">Edit</a> | <a href="admin.php?page=custom-buttons-list&btn_delete=delete_'.$btnl->id.'" onclick="return  confirm(\'Do you want to delete Y/N?\')">Delete</a></td>';
         echo '</tr>';
       }
     ?>
