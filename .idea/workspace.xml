@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01bc6584-7c7c-469a-a315-1924c108d6be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/tlbtn-functions.php" afterPath="$PROJECT_DIR$/includes/tlbtn-functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/single-post.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tlbtn-single-post-ref.php" afterPath="$PROJECT_DIR$/tlbtn-single-post-ref.php" />
     </list>
     <ignored path="wpTLButton.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tlbtn-functions.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tlbtn-functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/tlbtn-functions.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="417">
@@ -95,11 +97,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tlbtn-single-post-ref.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tlbtn-single-post-ref.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tlbtn-single-post-ref.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-53">
-              <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
+            <state relative-caret-position="443">
+              <caret line="239" column="27" selection-start-line="239" selection-start-column="27" selection-end-line="239" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single-post.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/single-post.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1179">
+              <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -120,8 +132,9 @@
         <option value="$PROJECT_DIR$/includes/tltbn-list-delete.php" />
         <option value="$PROJECT_DIR$/includes/tlbtn-add-update.php" />
         <option value="$PROJECT_DIR$/css/tlbtn_styles.css" />
-        <option value="$PROJECT_DIR$/tlbtn-single-post-ref.php" />
         <option value="$PROJECT_DIR$/includes/tlbtn-functions.php" />
+        <option value="$PROJECT_DIR$/css/single-post.css" />
+        <option value="$PROJECT_DIR$/tlbtn-single-post-ref.php" />
       </list>
     </option>
   </component>
@@ -284,12 +297,12 @@
       <option name="presentableId" value="Default" />
       <updated>1509534424025</updated>
       <workItem from="1509534428786" duration="9306000" />
-      <workItem from="1509602322156" duration="4846000" />
+      <workItem from="1509602322156" duration="5695000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14152000" />
+    <option name="totallyTimeSpent" value="15001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1368" height="732" extended-state="6" />
@@ -395,26 +408,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/tlbtn-shortocde.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tlbtn-single-post-ref.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-53">
-          <caret line="117" column="12" selection-start-line="117" selection-start-column="12" selection-end-line="117" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -459,6 +456,30 @@
             <marker date="1509622684865" expanded="true" signature="2573:2594" placeholder="..." />
             <marker date="1509622684865" expanded="true" signature="2844:2864" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/single-post.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1179">
+          <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tlbtn-single-post-ref.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="239" column="27" selection-start-line="239" selection-start-column="27" selection-end-line="239" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
