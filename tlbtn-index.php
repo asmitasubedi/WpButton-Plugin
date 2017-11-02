@@ -18,7 +18,7 @@ function custombuttons_admin_register_head(){
 	$cssurl = CUSTOM_BUTTON_CREATOR_URL.'/css/tlbtn_styles.css';
 	echo '<link rel=\'stylesheet\' href="'.$cssurl.'" type=\'text/css\' media=\'all\' />';
 
-	echo '<script src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>';
+	echo '<link rel=\'stylesheet\' href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>';
 }
 
 function custombuttons_admin_load_js(){

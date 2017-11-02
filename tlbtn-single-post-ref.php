@@ -143,49 +143,15 @@
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
 	<script>
+
 		$(document).ready(function()
 		{
 			//global url
 			$url= window.location.href;
 			console.log($url);
 
-			//submit button action
-			$("#tlbtn-sumbit").click(function(){
 
-				FormObject = document.forms['tlbtnForm'];
-
-				var name = FormObject.elements["name"].value;
-				var location = FormObject.elements["location"].value;
-				var phone = FormObject.elements["phone"].value
-
-				//if empty throw error
-				if(name == "" || location == "" || phone ==""){
-					alert("Please, fill up all the fields.");
-				}
-				//on success
-				else {
-
-					//cleaning the $url
-					$url=window.location.origin+window.location.pathname;
-
-					window.location = $url+'#tlbtn-openSuccessDialog';
-
-				}
-				console.log("Name: " + name + " Location: " + location + " Phone: "+ phone);
-			});
-
-			//on close button
-			$(".tlBtn-close").click(function(){
-
-				console.log(window.location.origin+window.location.pathname);
-
-				//cleaning the $url
-				$url=window.location.origin+window.location.pathname;
-			});
-
-
-
-			//$("#test").hide();
+//$("#test").hide();
 			$("button").click(function()
 			{
 				var c1 =($(this).data("class"));
@@ -198,23 +164,95 @@
 					//alert($(this).data("title"));alert($(this).data("price"));
 					FormObject = document.forms['test'];
 					//	alert(FormObject.elements["btnname"].value = $(this).data("title"));
-					var productName = $(this).data("title");
-					console.log(productName);
-					$('#tlbtn-product-name').html(productName);
-					// FormObject.elements["btnname"].value = $(this).data("title");
 
+					//set data to variable to make cookies
+					var productName = $(this).data("title");
+					var productPrice = $(this).data("price");
+					var productURL = $(this).data("request-url");
+
+					//put product name on popup title
+					$('#tlbtn-product-name').html(productName);
+
+					//make cookies for email - product information
+					document.cookie = "tlbtn_productName= " + productName;
+					document.cookie = "tlbtn_productPrice= " + productPrice;
+					document.cookie = "tlbtn_productRequestURL= " + productURL;
+					document.cookie = "tlbtn_siteURL= " + window.location.origin+window.location.pathname;
+
+					// FormObject.elements["btnname"].value = $(this).data("title");
 					//$('#tlbtn-product-price').html = $(this).data("price");
 					//	alert(FormObject.elements["price"].value = $(this).data("price"));
-
 					//FormObject.elements["price"].value = $(this).data("price");
-
-
-//							$("#test").show();
+					//$("#test").show();
 				}
 				else {
-//							$("#test").hide();
+					//$("#test").hide();
 				}
 			});
+		});
+
+		//submit button action
+		$("#tlbtn-sumbit").click(function(){
+
+			FormObject = document.forms['tlbtnForm'];
+
+			var name = FormObject.elements["name"].value;
+			var location = FormObject.elements["location"].value;
+			var phone = FormObject.elements["phone"].value
+
+			//if empty throw error
+			if(name == "" || location == "" || phone ==""){
+				alert("Please, fill up all the fields.");
+			}
+			//on success
+			else {
+				//make cookies for email - personal information
+				document.cookie = "tlbtn_name= " + FormObject.elements["name"].value;
+				document.cookie = "tlbtn_location= " + FormObject.elements["location"].value;
+				document.cookie = "tlbtn_phone= " + FormObject.elements["phone"].value;
+
+
+				<?php
+				//email information fetched from cookies
+				$tlbtn_name = $_COOKIE["tlbtn_name"];
+				$tlbtn_location = $_COOKIE["tlbtn_location"];
+				$tlbtn_phone = $_COOKIE["tlbtn_phone"];
+				$tlbtn_productName = $_COOKIE["tlbtn_productName"];
+				$tlbtn_productPrice = $_COOKIE["tlbtn_productPrice"];
+				$tlbtn_productRequestURL = $_COOKIE["tlbtn_productRequestURL"];
+				$tlbtn_siteURL = $_COOKIE["tlbtn_siteURL"];
+
+				//email template ready
+				$to = 'agupta@alumni.deerwalk.edu.np';
+				$date = date_create();
+				$subject = 'View Discounted Offers [TechLekh] | Timestamp: ' . date_format($date, 'Y-m-d H:i:s');
+				$body = 'Dear Admin, <br><br> You have got a view offer request from: <br><br><b>Person Information</b><br><b>Name:</b> '. $tlbtn_name . '<br><b>Location:</b>' . $tlbtn_location . '<br><b>Phone:</b> ' . $tlbtn_phone . '<br><br><b>Product Information</b><br>' . '<b>Name:</b> ' . $tlbtn_productName . '<br><b>Price:</b> '	. $tlbtn_productPrice . '<br><b>Request Link:</b> ' . $tlbtn_productRequestURL . '<br><b>Site Link</b> ' . $tlbtn_siteURL .
+					'<br><br> Reach this person out asap.';
+
+				$headers = array('Content-Type: text/html; charset=UTF-8');
+
+				//send email
+				wp_mail( $to, $subject, $body, $headers );
+				?>
+
+				//cleaning the $url
+				$url=window.location.origin+window.location.pathname;
+
+				window.location = $url+'#tlbtn-openSuccessDialog';
+
+
+
+			}
+			console.log("Name: " + name + " Location: " + location + " Phone: "+ phone);
+		});
+
+		//on close button
+		$(".tlBtn-close").click(function(){
+
+			console.log(window.location.origin+window.location.pathname);
+
+			//cleaning the $url
+			$url=window.location.origin+window.location.pathname;
 		});
 
 	</script>

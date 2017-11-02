@@ -17,7 +17,7 @@ echo '<div class="wrap">';
 echo '<h2>Button List</h2>';
 echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="new-btn" >Add New</div></a>';
 ?>
- <table class="wp-list-table widefat fixed bookmarks" id="myTable" cellspacing="0">
+ <table  id="myTable" class="display" cellspacing="0" width="100%">
     <thead>
       <tr>
         <th>Button</th>
@@ -25,7 +25,7 @@ echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="
 		<th>Request URL</th>
 		<th>Price</th>
         <th>Shortcode</th>
-        <th></th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tfoot>
@@ -35,7 +35,7 @@ echo '<a class="link-text" href="admin.php?page=custom-buttons-add"><div class="
 		<th>Request URL</th>
 		<th>Price</th>
         <th>Shortcode</th>
-        <th></th>
+        <th>Actions</th>
       </tr>
     </tfoot>
     <tbody>
