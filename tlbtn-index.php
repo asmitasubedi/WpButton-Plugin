@@ -32,7 +32,7 @@ function custombuttons_admin_load_js(){
 
 //load assets
 add_action('admin_head', 'custombuttons_admin_register_head');
-add_action('admin_footer','custombuttons_admin_load_js');
+add_action('admin_footer-custom-buttons_page_custom-buttons-add','custombuttons_admin_load_js');
 
 //add admin panel
 add_action('admin_menu', 'register_custom_admin_page');
