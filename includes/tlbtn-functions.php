@@ -4,7 +4,7 @@
 function redirectUser(){
     ?>
     <script>
-        window.location.assign("http://localhost/wordpress/wp-admin/admin.php?page=custom-buttons-list")
+        window.location.assign("https://techlekh.com/wp-admin/admin.php?page=custom-buttons-list")
     </script>
     <?php
 }

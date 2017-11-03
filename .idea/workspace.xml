@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01bc6584-7c7c-469a-a315-1924c108d6be" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/tltbn-list-delete.php" afterPath="$PROJECT_DIR$/includes/tltbn-list-delete.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/tlbtn_scripts.js" afterPath="$PROJECT_DIR$/js/tlbtn_scripts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/tlbtn_styles.css" afterPath="$PROJECT_DIR$/css/tlbtn_styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/tlbtn-functions.php" afterPath="$PROJECT_DIR$/includes/tlbtn-functions.php" />
     </list>
     <ignored path="wpTLButton.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +29,8 @@
       <file leaf-file-name="tlbtn_styles.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+            <state relative-caret-position="1224">
+              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -45,10 +46,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tltbn-list-delete.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tlbtn-functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/tlbtn-functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="96" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
+              <folding>
+                <marker date="1509637558000" expanded="true" signature="556:612" placeholder="SELECT * FRO... ${$table_name}" />
+                <marker date="1509637558000" expanded="true" signature="1904:1958" placeholder="DELETE FROM " />
+                <marker date="1509637558000" expanded="true" signature="2129:2180" placeholder="SELECT * FRO... ${$table_name}" />
+                <marker date="1509637558000" expanded="true" signature="2567:2588" placeholder="..." />
+                <marker date="1509637558000" expanded="true" signature="2838:2858" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tltbn-list-delete.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/tltbn-list-delete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="782">
               <caret line="46" column="197" selection-start-line="46" selection-start-column="197" selection-end-line="46" selection-end-column="197" />
               <folding>
                 <marker date="1509635522641" expanded="true" signature="174:216" placeholder="SELECT * FRO... ${$table_name}" />
@@ -60,11 +77,11 @@
       <file leaf-file-name="tlbtn-index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tlbtn-index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="340">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding>
                 <element signature="e#6#167#0#PHP" expanded="true" />
-                <marker date="1509625036406" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
+                <marker date="1509637179821" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
               </folding>
             </state>
           </provider>
@@ -83,18 +100,18 @@
       <file leaf-file-name="tlbtn-add-update.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/includes/tlbtn-add-update.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="493">
               <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tlbtn-single-post-ref.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tlbtn-single-post-ref.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tlbtn-single-post-ref.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="265" column="46" selection-start-line="265" selection-start-column="46" selection-end-line="265" selection-end-column="46" />
+            <state relative-caret-position="304">
+              <caret line="77" column="197" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="197" />
               <folding />
             </state>
           </provider>
@@ -103,8 +120,8 @@
       <file leaf-file-name="single-post.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/single-post.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1179">
-              <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+            <state relative-caret-position="2618">
+              <caret line="154" column="30" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="74" />
               <folding />
             </state>
           </provider>
@@ -122,13 +139,13 @@
         <option value="$PROJECT_DIR$/includes/tlbtn_include.php" />
         <option value="$PROJECT_DIR$/includes/tlbtn-shortocde.php" />
         <option value="$PROJECT_DIR$/includes/tlbtn-add-update.php" />
-        <option value="$PROJECT_DIR$/includes/tlbtn-functions.php" />
         <option value="$PROJECT_DIR$/css/single-post.css" />
-        <option value="$PROJECT_DIR$/tlbtn-index.php" />
-        <option value="$PROJECT_DIR$/css/tlbtn_styles.css" />
         <option value="$PROJECT_DIR$/tlbtn-single-post-ref.php" />
         <option value="$PROJECT_DIR$/js/tlbtn_scripts.js" />
         <option value="$PROJECT_DIR$/includes/tltbn-list-delete.php" />
+        <option value="$PROJECT_DIR$/css/tlbtn_styles.css" />
+        <option value="$PROJECT_DIR$/tlbtn-index.php" />
+        <option value="$PROJECT_DIR$/includes/tlbtn-functions.php" />
       </list>
     </option>
   </component>
@@ -172,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -236,6 +252,7 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,18 +308,19 @@
       <option name="presentableId" value="Default" />
       <updated>1509534424025</updated>
       <workItem from="1509534428786" duration="9306000" />
-      <workItem from="1509602322156" duration="8928000" />
+      <workItem from="1509602322156" duration="12274000" />
+      <workItem from="1509687269870" duration="591000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18234000" />
+    <option name="totallyTimeSpent" value="22171000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1368" height="732" extended-state="6" />
-    <editor active="true" />
+    <frame x="-4" y="-4" width="1368" height="732" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -330,6 +348,89 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/tlbtn-shortocde.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/tlbtn-functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="96" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
+          <folding>
+            <marker date="1509637558000" expanded="true" signature="556:612" placeholder="SELECT * FRO... ${$table_name}" />
+            <marker date="1509637558000" expanded="true" signature="1904:1958" placeholder="DELETE FROM " />
+            <marker date="1509637558000" expanded="true" signature="2129:2180" placeholder="SELECT * FRO... ${$table_name}" />
+            <marker date="1509637558000" expanded="true" signature="2567:2588" placeholder="..." />
+            <marker date="1509637558000" expanded="true" signature="2838:2858" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/tltbn-list-delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="197" selection-start-line="46" selection-start-column="197" selection-end-line="46" selection-end-column="197" />
+          <folding>
+            <marker date="1509635522641" expanded="true" signature="174:216" placeholder="SELECT * FRO... ${$table_name}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tlbtn-index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#167#0#PHP" expanded="true" />
+            <marker date="1509637179821" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tlbtn_scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/tlbtn-add-update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tlbtn-single-post-ref.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/single-post.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="154" column="30" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1734">
           <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
           <folding />
@@ -349,11 +450,11 @@
         <state relative-caret-position="1411">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <marker date="1509622684865" expanded="true" signature="562:618" placeholder="SELECT * FRO... ${$table_name}" />
-            <marker date="1509622684865" expanded="true" signature="1910:1964" placeholder="DELETE FROM " />
-            <marker date="1509622684865" expanded="true" signature="2135:2186" placeholder="SELECT * FRO... ${$table_name}" />
-            <marker date="1509622684865" expanded="true" signature="2573:2594" placeholder="..." />
-            <marker date="1509622684865" expanded="true" signature="2844:2864" placeholder="..." />
+            <marker date="1509637558000" expanded="true" signature="556:612" placeholder="SELECT * FRO... ${$table_name}" />
+            <marker date="1509637558000" expanded="true" signature="1904:1958" placeholder="DELETE FROM " />
+            <marker date="1509637558000" expanded="true" signature="2129:2180" placeholder="SELECT * FRO... ${$table_name}" />
+            <marker date="1509637558000" expanded="true" signature="2567:2588" placeholder="..." />
+            <marker date="1509637558000" expanded="true" signature="2838:2858" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -374,7 +475,7 @@
           <caret line="17" column="58" selection-start-line="17" selection-start-column="58" selection-end-line="17" selection-end-column="58" />
           <folding>
             <element signature="e#6#167#0#PHP" expanded="true" />
-            <marker date="1509625036406" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
+            <marker date="1509637179821" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
@@ -402,24 +503,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/single-post.css">
+    <entry file="file://$PROJECT_DIR$/js/tlbtn_scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1179">
-          <caret line="160" column="1" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+        <state relative-caret-position="340">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/tlbtn-functions.php">
+    <entry file="file://$PROJECT_DIR$/includes/tlbtn-add-update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="86" column="42" selection-start-line="86" selection-start-column="42" selection-end-line="86" selection-end-column="42" />
+        <state relative-caret-position="493">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/tltbn-list-delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="197" selection-start-line="46" selection-start-column="197" selection-end-line="46" selection-end-column="197" />
           <folding>
-            <marker date="1509622684865" expanded="true" signature="562:618" placeholder="SELECT * FRO... ${$table_name}" />
-            <marker date="1509622684865" expanded="true" signature="1910:1964" placeholder="DELETE FROM " />
-            <marker date="1509622684865" expanded="true" signature="2135:2186" placeholder="SELECT * FRO... ${$table_name}" />
-            <marker date="1509622684865" expanded="true" signature="2573:2594" placeholder="..." />
-            <marker date="1509622684865" expanded="true" signature="2844:2864" placeholder="..." />
+            <marker date="1509635522641" expanded="true" signature="174:216" placeholder="SELECT * FRO... ${$table_name}" />
           </folding>
         </state>
       </provider>
@@ -432,56 +537,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/single-post.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="154" column="30" selection-start-line="154" selection-start-column="26" selection-end-line="154" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tlbtn-index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="340">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding>
             <element signature="e#6#167#0#PHP" expanded="true" />
-            <marker date="1509625036406" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
+            <marker date="1509637179821" expanded="true" signature="1924:2347" placeholder="CREATE TABLE... IF" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/tlbtn_styles.css">
+    <entry file="file://$PROJECT_DIR$/includes/tlbtn-functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/tlbtn_scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="102">
+          <caret line="6" column="96" selection-start-line="6" selection-start-column="96" selection-end-line="6" selection-end-column="96" />
+          <folding>
+            <marker date="1509637558000" expanded="true" signature="556:612" placeholder="SELECT * FRO... ${$table_name}" />
+            <marker date="1509637558000" expanded="true" signature="1904:1958" placeholder="DELETE FROM " />
+            <marker date="1509637558000" expanded="true" signature="2129:2180" placeholder="SELECT * FRO... ${$table_name}" />
+            <marker date="1509637558000" expanded="true" signature="2567:2588" placeholder="..." />
+            <marker date="1509637558000" expanded="true" signature="2838:2858" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tlbtn-single-post-ref.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="265" column="46" selection-start-line="265" selection-start-column="46" selection-end-line="265" selection-end-column="46" />
+        <state relative-caret-position="304">
+          <caret line="77" column="197" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="197" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/tlbtn-add-update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/tltbn-list-delete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="46" column="197" selection-start-line="46" selection-start-column="197" selection-end-line="46" selection-end-column="197" />
-          <folding>
-            <marker date="1509635522641" expanded="true" signature="174:216" placeholder="SELECT * FRO... ${$table_name}" />
-          </folding>
         </state>
       </provider>
     </entry>
