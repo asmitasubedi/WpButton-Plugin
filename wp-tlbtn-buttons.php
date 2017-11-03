@@ -29,17 +29,16 @@ function custombuttons_admin_load_js(){
 	echo '<script src="'.$jsurl.'"></script>';
 }
 
-
 //load assets
 add_action('admin_head', 'custombuttons_admin_register_head');
-add_action('admin_footer-custom-buttons_page_custom-buttons-add','custombuttons_admin_load_js');
+add_action('admin_enqueue_scripts','custombuttons_admin_load_js');
 
 //add admin panel
 add_action('admin_menu', 'register_custom_admin_page');
 
 //create menus in admin panel
 function register_custom_admin_page(){
-    add_menu_page("TL Buttons", "TL Buttons", "add_users", __FILE__, "custom_buttons_list");
+    add_menu_page("TL Buttons", "TL Buttons", "add_users", __FILE__, "custom_buttons_list", plugins_url('wp-tlbtn-buttons/images/icon.png'));
 	add_submenu_page(__FILE__, "Manage Buttons", "Manage Buttons", "add_users", "custom-buttons-list", "custom_buttons_list");
     add_submenu_page(__FILE__, "Add Buttons", "Add Buttons", "add_users","custom-buttons-add", "custom_buttons_add");
 }
