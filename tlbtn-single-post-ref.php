@@ -73,11 +73,6 @@
 
 	</div>
 
-	<a href="#tlBtn-openModal"><button type="button" class="custom-buttons" data-class="tlbtn_2" data-title="Test" data-request-url="dfasfdsa" data-price="11111">dsfasd</button></a>
-
-	<a href="#tlBtn-openModal"><button type="button" class="custom-buttons" data-class="tlbtn_23" data-title="Tessdfsfsfast" data-request-url="dfasfdsa" data-price="11121212111">dsfasd</button></a>
-
-
 
 	<div id="tlBtn-openModal" class="tlBtn-modalDialog">
 		<div>	<a href="#tlBtn-close" title="Close" class="tlBtn-close">X</a>
@@ -97,31 +92,18 @@
 					<div class="tlbtn-form-field"> <label for="tlbtn-field-contact">Phone</label> <input id="tlbtn-field-name-input" type="text" required="required" placeholder="Enter your hone number (9813XXXXXX or 01-44XXXXX)" name="phone"></div>
 
 
-
-
 					<div id="tlbtn-sumit-div">
 						<div id="tlbtn-sumbit">
-
 							<input  type="button" value="Submit">
-
 						</div>
-
 					</div>
-
-
 
 				</form>
 
 				<div id="tlbtn-text">We value your privacy. Your details are secure with us.</div>
-
-
 			</div>
-
 		</div>
 	</div>
-
-
-
 
 	<div id="tlbtn-openSuccessDialog" class="tlbtn-successDialog">
 		<div id="tlbtn-success-internal">
@@ -138,7 +120,6 @@
 
 		</div>
 	</div>
-
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
 
@@ -223,7 +204,8 @@
 				$tlbtn_siteURL = $_COOKIE["tlbtn_siteURL"];
 
 				//email template ready
-				$to = 'agupta@alumni.deerwalk.edu.np';
+				$to = 'contact@techlekh.com';
+				date_default_timezone_set("Asia/Kathmandu");
 				$date = date_create();
 				$subject = 'View Discounted Offers [TechLekh] | Timestamp: ' . date_format($date, 'Y-m-d H:i:s');
 				$body = 'Dear Admin, <br><br> You have got a view offer request from: <br><br><b>Person Information</b><br><b>Name:</b> '. $tlbtn_name . '<br><b>Location:</b>' . $tlbtn_location . '<br><b>Phone:</b> ' . $tlbtn_phone . '<br><br><b>Product Information</b><br>' . '<b>Name:</b> ' . $tlbtn_productName . '<br><b>Price:</b> '	. $tlbtn_productPrice . '<br><b>Request Link:</b> ' . $tlbtn_productRequestURL . '<br><b>Site Link</b> ' . $tlbtn_siteURL .
@@ -233,15 +215,14 @@
 
 				//send email
 				wp_mail( $to, $subject, $body, $headers );
+
+				echo "alert('Mail sent')";
+
 				?>
 
 				//cleaning the $url
 				$url=window.location.origin+window.location.pathname;
-
 				window.location = $url+'#tlbtn-openSuccessDialog';
-
-
-
 			}
 			console.log("Name: " + name + " Location: " + location + " Phone: "+ phone);
 		});
