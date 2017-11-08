@@ -17,13 +17,11 @@ include 'includes/tlbtn_include.php';
 function custombuttons_admin_register_head(){
 	$cssurl = CUSTOM_BUTTON_CREATOR_URL.'/css/tlbtn_styles.css';
 	echo '<link rel=\'stylesheet\' href="'.$cssurl.'" type=\'text/css\' media=\'all\' />';
-
 	echo '<link rel=\'stylesheet\' href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"/>';
 }
 
 function custombuttons_admin_load_js(){
 	$jsurl = CUSTOM_BUTTON_CREATOR_URL.'/js/tlbtn_scripts.js';
-
 	echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>';
 	echo '<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>';
 	echo '<script src="'.$jsurl.'"></script>';
