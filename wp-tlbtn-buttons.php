@@ -36,7 +36,7 @@ add_action('admin_menu', 'register_custom_admin_page');
 
 //create menus in admin panel
 function register_custom_admin_page(){
-    add_menu_page("TL Buttons", "TL Buttons", "add_users", __FILE__, "custom_buttons_list", plugins_url('wp-tlbtn-buttons/images/icon.png'));
+    add_menu_page("TL Buttons", "TL Buttons", "add_users", __FILE__, "custom_buttons_list", plugins_url('wpTLButton/images/icon.png'));
 	add_submenu_page(__FILE__, "Manage Buttons", "Manage Buttons", "add_users", "custom-buttons-list", "custom_buttons_list");
     add_submenu_page(__FILE__, "Add Buttons", "Add Buttons", "add_users","custom-buttons-add", "custom_buttons_add");
 }
