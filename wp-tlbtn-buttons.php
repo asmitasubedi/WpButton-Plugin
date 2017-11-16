@@ -110,12 +110,4 @@ function save_to_db() {
     echo "Successful";
 	die();
 }
-Ajax call from single.php to plugin file in the backend
-I am creating a button plugin which on-click displays a popup modal. The customers then enter their information onto the modal and click save. After submission, the information needs to be passed to the plugin file in the backend through Ajax which will be saved in the database. 
-
-But the ajax request do not seem to reach admin-ajax.php. 
-
-The jquery to send a request to admin-ajax.php lies in the single.php file while the rest of the actions and hooks lie in the plugin file.
-
-Here is the js code on the single.php file:
 ?>
